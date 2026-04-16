@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <title>Question</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      background: #111;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #yes {
+      background: #00c853;
+      color: white;
+    }
+
+    #no {
+      background: #d50000;
+      color: white;
+    }
+
+    #result {
+      margin-top: 40px;
+      font-size: 24px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>чи гомо юм уу?</h1>
+
+  <button id="yes">Тийм</button>
+  <button id="no">Үгүй</button>
+
+  <div id="result">мэдсиймаа 😏</div>
+
+  <script>
+    let yesBtn = document.getElementById("yes");
+    let noBtn = document.getElementById("no");
+    let result = document.getElementById("result");
+
+    let size = 18;
+
+    noBtn.onclick = () => {
+      size += 10;
+      yesBtn.style.fontSize = size + "px";
+      yesBtn.style.padding = (size/2) + "px " + size + "px";
+    };
+
+    yesBtn.onclick = () => {
+      result.style.display = "block";
+    };
+  </script>
+
+</body>
+</html>
